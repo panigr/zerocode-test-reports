@@ -1,5 +1,6 @@
 scenarioName,scenarioLoop,stepName,stepLoop,correlationId,requestTimeStamp,responseDelayMilliSec,responseTimeStamp,result,method,metaAuthors,metaTickets,metaCategories,metaOthers
 "org.jsmart.zerocode.testhelp.tests.reportuploader.ReportUploaderTest",0,dummyTest,0,"7419484b-64ee-4f6f-914d-63cbb45bb5dc","2025-04-24T13:28:01.792097",4.0,"2025-04-24T13:28:01.796223",FAILED,,,,,
+"GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body",0,get_user_details,,"c67cb862-4c28-4426-b845-46efa7c32955","2025-04-24T13:38:07.880594",581.0,"2025-04-24T13:38:08.461910",PASSED,GET,,,,
 "GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body",0,get_user_details,,"071c9fe4-968d-414a-903d-fe6d50889f93","2025-04-24T13:11:49.931994",566.0,"2025-04-24T13:11:50.498897",PASSED,GET,,,,
 "Assert that file has been uploaded successfully",0,post_file,,"07073511-95eb-474e-8fe4-205277eeecce","2025-04-23T23:48:03.709426",1313.0,"2025-04-23T23:48:05.023240",PASSED,POST,,,,
 "org.jsmart.zerocode.testhelp.tests.reportuploader.ReportUploaderTest",0,dummyTest,0,"7f966b02-af4e-4287-a1f6-3e4bc0527ff6","2025-04-24T13:28:42.435190",0.0,"2025-04-24T13:28:42.435419",PASSED,,,,,
