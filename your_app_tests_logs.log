@@ -1,81 +1,4 @@
-2025-04-23 23:48:03,689 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
------------------------------------------------------------------------------------
-
-Scenario:
-+++++++++
-
-Assert that file has been uploaded successfully 
-
------------------------------------------------------------------------------------
-2025-04-23 23:48:05,026 [main] WARN  org.jsmart.zerocode.core.runner.StepNotificationHandler - 
-***Step PASSED - Scenario:Assert that file has been uploaded successfully -> post_file
-2025-04-23 23:48:05,026 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
---------- TEST-STEP-CORRELATION-ID: 07073511-95eb-474e-8fe4-205277eeecce ---------
-*requestTimeStamp:2025-04-23T23:48:03.709426
-step:post_file
-id:None
-url:https://postman-echo.com/post
-method:POST
-request:
-{
-  "headers" : {
-    "Content-Type" : "multipart/form-data"
-  },
-  "body" : {
-    "files" : [ "file:helloworld_file_upload/textfile.txt" ]
-  }
-} 
---------- TEST-STEP-CORRELATION-ID: 07073511-95eb-474e-8fe4-205277eeecce ---------
-Response:
-{
-  "status" : 200,
-  "headers" : {
-    "Connection" : [ "keep-alive" ],
-    "Content-Length" : [ "674" ],
-    "Content-Type" : [ "application/json; charset=utf-8" ],
-    "Date" : [ "Wed, 23 Apr 2025 18:18:04 GMT" ],
-    "ETag" : [ "W/\"2a2-xeM8GjRCGKrkxl7ryqchN1zQEvo\"" ],
-    "Server" : [ "nginx" ],
-    "set-cookie" : [ "sails.sid=s%3AZsjeuFtm-_TKPOflNJ2ANgbb-hQiSRmO.cAWFAo7Ktyw0VZmyyXez4%2FbIAMkET0yM1qbGyOU1ZJg; Path=/; HttpOnly" ]
-  },
-  "body" : {
-    "args" : { },
-    "data" : { },
-    "files" : {
-      "textfile.txt" : "data:application/octet-stream;base64,SGVsbG9Xb3JsZA=="
-    },
-    "form" : { },
-    "headers" : {
-      "host" : "postman-echo.com",
-      "x-request-start" : "t1745432284.915",
-      "connection" : "close",
-      "content-length" : "247",
-      "x-forwarded-proto" : "https",
-      "x-forwarded-port" : "443",
-      "x-amzn-trace-id" : "Root=1-68092edc-23a60427528d27300d2ac09f",
-      "content-type" : "multipart/form-data; boundary=\"17454322838202025-04-23T23:48:03.820756\"",
-      "user-agent" : "Apache-HttpClient/4.5.13 (Java/17.0.13)",
-      "accept-encoding" : "gzip,deflate"
-    },
-    "json" : null,
-    "url" : "https://postman-echo.com/post"
-  }
-}
-*responseTimeStamp:2025-04-23T23:48:05.023240 
-*Response delay:1313.0 milli-secs 
----------> Expected Response: <----------
-{
-  "status" : 200,
-  "body" : {
-    "files" : {
-      "['textfile.txt']" : "data:application/octet-stream;base64,SGVsbG9Xb3JsZA=="
-    }
-  }
-} 
- 
--done-
-
-2025-04-24 13:11:49,911 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+2025-07-19 20:46:58,842 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
 -----------------------------------------------------------------------------------
 
 Scenario:
@@ -84,18 +7,18 @@ Scenario:
 GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body 
 
 -----------------------------------------------------------------------------------
-2025-04-24 13:11:50,504 [main] WARN  org.jsmart.zerocode.core.runner.StepNotificationHandler - 
+2025-07-19 20:46:59,415 [main] WARN  org.jsmart.zerocode.core.runner.StepNotificationHandler - 
 ***Step PASSED - Scenario:GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body -> get_user_details
-2025-04-24 13:11:50,504 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
---------- TEST-STEP-CORRELATION-ID: 071c9fe4-968d-414a-903d-fe6d50889f93 ---------
-*requestTimeStamp:2025-04-24T13:11:49.931994
+2025-07-19 20:46:59,415 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+--------- TEST-STEP-CORRELATION-ID: 1a1a8059-7cde-4f4c-93ef-0b8a92259101 ---------
+*requestTimeStamp:2025-07-19T20:46:58.862141
 step:get_user_details
 id:None
 url:https://api.github.com/users/octocat
 method:GET
 request:
 { } 
---------- TEST-STEP-CORRELATION-ID: 071c9fe4-968d-414a-903d-fe6d50889f93 ---------
+--------- TEST-STEP-CORRELATION-ID: 1a1a8059-7cde-4f4c-93ef-0b8a92259101 ---------
 Response:
 {
   "status" : 200,
@@ -106,9 +29,9 @@ Response:
     "Cache-Control" : [ "public, max-age=60, s-maxage=60" ],
     "Content-Security-Policy" : [ "default-src 'none'" ],
     "Content-Type" : [ "application/json; charset=utf-8" ],
-    "Date" : [ "Thu, 24 Apr 2025 07:41:50 GMT" ],
-    "ETag" : [ "W/\"7d0954998cf00bd87b1489f4124e9439dd99afee6e73642d8e6f8ac0f6c27b61\"" ],
-    "Last-Modified" : [ "Tue, 22 Apr 2025 11:22:07 GMT" ],
+    "Date" : [ "Sat, 19 Jul 2025 15:16:59 GMT" ],
+    "ETag" : [ "W/\"b9feb106a0cbb7e172ea2bec1f1af443cb63b01e9987ff90760a4bb13c1295cd\"" ],
+    "Last-Modified" : [ "Sun, 22 Jun 2025 11:21:58 GMT" ],
     "Referrer-Policy" : [ "origin-when-cross-origin, strict-origin-when-cross-origin" ],
     "Server" : [ "github.com" ],
     "Strict-Transport-Security" : [ "max-age=31536000; includeSubdomains; preload" ],
@@ -117,12 +40,12 @@ Response:
     "X-Frame-Options" : [ "deny" ],
     "x-github-api-version-selected" : [ "2022-11-28" ],
     "X-GitHub-Media-Type" : [ "github.v3; format=json" ],
-    "X-GitHub-Request-Id" : [ "0695:2B47FA:854BDF:A5C93B:6809EB3E" ],
+    "X-GitHub-Request-Id" : [ "8E5D:2AF4B3:6E202:8DFA5:687BB6EB" ],
     "X-RateLimit-Limit" : [ "60" ],
-    "X-RateLimit-Remaining" : [ "43" ],
-    "X-RateLimit-Reset" : [ "1745482113" ],
+    "X-RateLimit-Remaining" : [ "55" ],
+    "X-RateLimit-Reset" : [ "1752939768" ],
     "X-RateLimit-Resource" : [ "core" ],
-    "X-RateLimit-Used" : [ "17" ],
+    "X-RateLimit-Used" : [ "5" ],
     "X-XSS-Protection" : [ "0" ]
   },
   "body" : {
@@ -155,115 +78,14 @@ Response:
     "twitter_username" : null,
     "public_repos" : 8,
     "public_gists" : 8,
-    "followers" : 17690,
+    "followers" : 18662,
     "following" : 9,
     "created_at" : "2011-01-25T18:44:36Z",
-    "updated_at" : "2025-04-22T11:22:07Z"
+    "updated_at" : "2025-06-22T11:21:58Z"
   }
 }
-*responseTimeStamp:2025-04-24T13:11:50.498897 
-*Response delay:566.0 milli-secs 
----------> Expected Response: <----------
-{
-  "status" : 200,
-  "body" : {
-    "login" : "octocat",
-    "id" : 583231,
-    "type" : "User"
-  }
-} 
- 
--done-
-
-2025-04-24 13:28:01,792 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner - JUnit test failed due to : java.lang.AssertionError,  passed = false
-2025-04-24 13:38:07,859 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
------------------------------------------------------------------------------------
-
-Scenario:
-+++++++++
-
-GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body 
-
------------------------------------------------------------------------------------
-2025-04-24 13:38:08,467 [main] WARN  org.jsmart.zerocode.core.runner.StepNotificationHandler - 
-***Step PASSED - Scenario:GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body -> get_user_details
-2025-04-24 13:38:08,467 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
---------- TEST-STEP-CORRELATION-ID: c67cb862-4c28-4426-b845-46efa7c32955 ---------
-*requestTimeStamp:2025-04-24T13:38:07.880594
-step:get_user_details
-id:None
-url:https://api.github.com/users/octocat
-method:GET
-request:
-{ } 
---------- TEST-STEP-CORRELATION-ID: c67cb862-4c28-4426-b845-46efa7c32955 ---------
-Response:
-{
-  "status" : 200,
-  "headers" : {
-    "Accept-Ranges" : [ "bytes" ],
-    "Access-Control-Allow-Origin" : [ "*" ],
-    "Access-Control-Expose-Headers" : [ "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset" ],
-    "Cache-Control" : [ "public, max-age=60, s-maxage=60" ],
-    "Content-Security-Policy" : [ "default-src 'none'" ],
-    "Content-Type" : [ "application/json; charset=utf-8" ],
-    "Date" : [ "Thu, 24 Apr 2025 08:08:08 GMT" ],
-    "ETag" : [ "W/\"7d0954998cf00bd87b1489f4124e9439dd99afee6e73642d8e6f8ac0f6c27b61\"" ],
-    "Last-Modified" : [ "Tue, 22 Apr 2025 11:22:07 GMT" ],
-    "Referrer-Policy" : [ "origin-when-cross-origin, strict-origin-when-cross-origin" ],
-    "Server" : [ "github.com" ],
-    "Strict-Transport-Security" : [ "max-age=31536000; includeSubdomains; preload" ],
-    "Vary" : [ "Accept,Accept-Encoding, Accept, X-Requested-With" ],
-    "X-Content-Type-Options" : [ "nosniff" ],
-    "X-Frame-Options" : [ "deny" ],
-    "x-github-api-version-selected" : [ "2022-11-28" ],
-    "X-GitHub-Media-Type" : [ "github.v3; format=json" ],
-    "X-GitHub-Request-Id" : [ "E693:2B47FA:89367A:AA5267:6809F168" ],
-    "X-RateLimit-Limit" : [ "60" ],
-    "X-RateLimit-Remaining" : [ "35" ],
-    "X-RateLimit-Reset" : [ "1745482113" ],
-    "X-RateLimit-Resource" : [ "core" ],
-    "X-RateLimit-Used" : [ "25" ],
-    "X-XSS-Protection" : [ "0" ]
-  },
-  "body" : {
-    "login" : "octocat",
-    "id" : 583231,
-    "node_id" : "MDQ6VXNlcjU4MzIzMQ==",
-    "avatar_url" : "https://avatars.githubusercontent.com/u/583231?v=4",
-    "gravatar_id" : "",
-    "url" : "https://api.github.com/users/octocat",
-    "html_url" : "https://github.com/octocat",
-    "followers_url" : "https://api.github.com/users/octocat/followers",
-    "following_url" : "https://api.github.com/users/octocat/following{/other_user}",
-    "gists_url" : "https://api.github.com/users/octocat/gists{/gist_id}",
-    "starred_url" : "https://api.github.com/users/octocat/starred{/owner}{/repo}",
-    "subscriptions_url" : "https://api.github.com/users/octocat/subscriptions",
-    "organizations_url" : "https://api.github.com/users/octocat/orgs",
-    "repos_url" : "https://api.github.com/users/octocat/repos",
-    "events_url" : "https://api.github.com/users/octocat/events{/privacy}",
-    "received_events_url" : "https://api.github.com/users/octocat/received_events",
-    "type" : "User",
-    "user_view_type" : "public",
-    "site_admin" : false,
-    "name" : "The Octocat",
-    "company" : "@github",
-    "blog" : "https://github.blog",
-    "location" : "San Francisco",
-    "email" : null,
-    "hireable" : null,
-    "bio" : null,
-    "twitter_username" : null,
-    "public_repos" : 8,
-    "public_gists" : 8,
-    "followers" : 17690,
-    "following" : 9,
-    "created_at" : "2011-01-25T18:44:36Z",
-    "updated_at" : "2025-04-22T11:22:07Z"
-  }
-}
-*responseTimeStamp:2025-04-24T13:38:08.461910 
-*Response delay:581.0 milli-secs 
+*responseTimeStamp:2025-07-19T20:46:59.409746 
+*Response delay:547.0 milli-secs 
 ---------> Expected Response: <----------
 {
   "status" : 200,
