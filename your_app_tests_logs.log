@@ -98,3 +98,103 @@ Response:
  
 -done-
 
+2025-07-19 20:51:33,910 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+-----------------------------------------------------------------------------------
+
+Scenario:
++++++++++
+
+GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body 
+
+-----------------------------------------------------------------------------------
+2025-07-19 20:51:34,519 [main] WARN  org.jsmart.zerocode.core.runner.StepNotificationHandler - 
+***Step PASSED - Scenario:GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body -> get_user_details
+2025-07-19 20:51:34,519 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+--------- TEST-STEP-CORRELATION-ID: ee4ef4db-f194-44d6-a165-04d799a8e051 ---------
+*requestTimeStamp:2025-07-19T20:51:33.930898
+step:get_user_details
+id:None
+url:https://api.github.com/users/octocat
+method:GET
+request:
+{ } 
+--------- TEST-STEP-CORRELATION-ID: ee4ef4db-f194-44d6-a165-04d799a8e051 ---------
+Response:
+{
+  "status" : 200,
+  "headers" : {
+    "Accept-Ranges" : [ "bytes" ],
+    "Access-Control-Allow-Origin" : [ "*" ],
+    "Access-Control-Expose-Headers" : [ "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Used, X-RateLimit-Resource, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, X-GitHub-SSO, X-GitHub-Request-Id, Deprecation, Sunset" ],
+    "Cache-Control" : [ "public, max-age=60, s-maxage=60" ],
+    "Content-Security-Policy" : [ "default-src 'none'" ],
+    "Content-Type" : [ "application/json; charset=utf-8" ],
+    "Date" : [ "Sat, 19 Jul 2025 15:21:34 GMT" ],
+    "ETag" : [ "W/\"b9feb106a0cbb7e172ea2bec1f1af443cb63b01e9987ff90760a4bb13c1295cd\"" ],
+    "Last-Modified" : [ "Sun, 22 Jun 2025 11:21:58 GMT" ],
+    "Referrer-Policy" : [ "origin-when-cross-origin, strict-origin-when-cross-origin" ],
+    "Server" : [ "github.com" ],
+    "Strict-Transport-Security" : [ "max-age=31536000; includeSubdomains; preload" ],
+    "Vary" : [ "Accept,Accept-Encoding, Accept, X-Requested-With" ],
+    "X-Content-Type-Options" : [ "nosniff" ],
+    "X-Frame-Options" : [ "deny" ],
+    "x-github-api-version-selected" : [ "2022-11-28" ],
+    "X-GitHub-Media-Type" : [ "github.v3; format=json" ],
+    "X-GitHub-Request-Id" : [ "902D:1A68E5:62550F:80FD65:687BB7FE" ],
+    "X-RateLimit-Limit" : [ "60" ],
+    "X-RateLimit-Remaining" : [ "54" ],
+    "X-RateLimit-Reset" : [ "1752939768" ],
+    "X-RateLimit-Resource" : [ "core" ],
+    "X-RateLimit-Used" : [ "6" ],
+    "X-XSS-Protection" : [ "0" ]
+  },
+  "body" : {
+    "login" : "octocat",
+    "id" : 583231,
+    "node_id" : "MDQ6VXNlcjU4MzIzMQ==",
+    "avatar_url" : "https://avatars.githubusercontent.com/u/583231?v=4",
+    "gravatar_id" : "",
+    "url" : "https://api.github.com/users/octocat",
+    "html_url" : "https://github.com/octocat",
+    "followers_url" : "https://api.github.com/users/octocat/followers",
+    "following_url" : "https://api.github.com/users/octocat/following{/other_user}",
+    "gists_url" : "https://api.github.com/users/octocat/gists{/gist_id}",
+    "starred_url" : "https://api.github.com/users/octocat/starred{/owner}{/repo}",
+    "subscriptions_url" : "https://api.github.com/users/octocat/subscriptions",
+    "organizations_url" : "https://api.github.com/users/octocat/orgs",
+    "repos_url" : "https://api.github.com/users/octocat/repos",
+    "events_url" : "https://api.github.com/users/octocat/events{/privacy}",
+    "received_events_url" : "https://api.github.com/users/octocat/received_events",
+    "type" : "User",
+    "user_view_type" : "public",
+    "site_admin" : false,
+    "name" : "The Octocat",
+    "company" : "@github",
+    "blog" : "https://github.blog",
+    "location" : "San Francisco",
+    "email" : null,
+    "hireable" : null,
+    "bio" : null,
+    "twitter_username" : null,
+    "public_repos" : 8,
+    "public_gists" : 8,
+    "followers" : 18662,
+    "following" : 9,
+    "created_at" : "2011-01-25T18:44:36Z",
+    "updated_at" : "2025-06-22T11:21:58Z"
+  }
+}
+*responseTimeStamp:2025-07-19T20:51:34.514182 
+*Response delay:583.0 milli-secs 
+---------> Expected Response: <----------
+{
+  "status" : 200,
+  "body" : {
+    "login" : "octocat",
+    "id" : 583231,
+    "type" : "User"
+  }
+} 
+ 
+-done-
+
