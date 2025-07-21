@@ -104,6 +104,7 @@ scenarioName,scenarioLoop,stepName,stepLoop,correlationId,requestTimeStamp,respo
 "GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body",0,get_user_details,,"ac2d0ab8-3091-488c-a888-a34db53f0d8b","2025-07-21T21:34:48.863035",423.0,"2025-07-21T21:34:49.286866",FAILED,GET,,,,
 "POST API - File json as part payload - Reuse in body",0,create_scr,,"af163870-8a54-4f17-9f48-a220a6eccd43","2025-07-21T21:30:23.450179",2.0,"2025-07-21T21:30:23.452771",PASSED,POST,,,,
 "POST API - File json as part payload - Reuse in body",0,get_user_details,,"e68455b1-9a9b-461a-a6e9-04de3f209be6","2025-07-21T21:30:23.453910",2.0,"2025-07-21T21:30:23.456476",PASSED,GET,,,,
+"GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body",0,get_user_details,,"39719940-eb4f-4bc4-b154-dce64d30ae8f","2025-07-21T21:37:23.838547",352.0,"2025-07-21T21:37:24.191394",FAILED,GET,,,,
 "Fetch and assert GitHub userIds by their userNames",0,get_user_details,,"b0c014e5-195e-4d3a-81cb-4fe457fa7675","2025-07-21T21:32:52.485132",185.0,"2025-07-21T21:32:52.670765",PASSED,GET,,,,
 "Fetch and assert GitHub userIds by their userNames",1,get_user_details,,"2311e9c9-c0af-4c3c-830f-90e73dc5fe4c","2025-07-21T21:32:52.673027",365.0,"2025-07-21T21:32:53.038934",PASSED,GET,,,,
 "Scenario - Single step",0,get_user_details,,"05c646e2-a601-47df-b255-a31634b2323b","2025-07-21T21:30:19.320849",0.0,"2025-07-21T21:30:19.321356",PASSED,,,,,
