@@ -101,6 +101,7 @@ scenarioName,scenarioLoop,stepName,stepLoop,correlationId,requestTimeStamp,respo
 "Another endpoint host from properties file available in the url",0,get_user_details_way2,,"414180c0-f006-4a1e-9f23-a322b0c16e24","2025-07-21T21:32:07.005807",21382.0,"2025-07-21T21:32:28.388254",FAILED,GET,,,,
 "Multi step exec all steps via ignore step failure",0,get_enitity,,"fd0e1db5-3885-4f6c-b52b-e7c714ddbb0d","2025-07-21T21:32:02.855803",371.0,"2025-07-21T21:32:03.227464",FAILED,GET,,,,
 "Multi step exec all steps via ignore step failure",0,get_user_details,,"dfe39bea-01a5-4344-8f28-db0975dbca6c","2025-07-21T21:32:03.238244",494.0,"2025-07-21T21:32:03.732499",PASSED,GET,,,,
+"GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body",0,get_user_details,,"ac2d0ab8-3091-488c-a888-a34db53f0d8b","2025-07-21T21:34:48.863035",423.0,"2025-07-21T21:34:49.286866",FAILED,GET,,,,
 "POST API - File json as part payload - Reuse in body",0,create_scr,,"af163870-8a54-4f17-9f48-a220a6eccd43","2025-07-21T21:30:23.450179",2.0,"2025-07-21T21:30:23.452771",PASSED,POST,,,,
 "POST API - File json as part payload - Reuse in body",0,get_user_details,,"e68455b1-9a9b-461a-a6e9-04de3f209be6","2025-07-21T21:30:23.453910",2.0,"2025-07-21T21:30:23.456476",PASSED,GET,,,,
 "Fetch and assert GitHub userIds by their userNames",0,get_user_details,,"b0c014e5-195e-4d3a-81cb-4fe457fa7675","2025-07-21T21:32:52.485132",185.0,"2025-07-21T21:32:52.670765",PASSED,GET,,,,

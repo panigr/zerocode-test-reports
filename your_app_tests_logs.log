@@ -9500,3 +9500,101 @@ Response:
 2025-07-21 21:33:39,194 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
 2025-07-21 21:33:39,386 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
 2025-07-21 21:33:40,480 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - Directory does not exist or is not a valid directory: target/surefire-reports/
+2025-07-21 21:33:52,088 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - Report upload failed: https://github.com/panigr/zerocode-test-reports.git: connection failed
+2025-07-21 21:33:52,304 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-21 21:34:48,841 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+-----------------------------------------------------------------------------------
+
+Scenario:
++++++++++
+
+GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body 
+
+-----------------------------------------------------------------------------------
+2025-07-21 21:34:49,289 [main] WARN  org.jsmart.zerocode.core.engine.assertion.JsonAsserter - Path: $.body.type was not found in the response. Hence this value was treated as null.
+2025-07-21 21:34:49,289 [main] WARN  org.jsmart.zerocode.core.engine.assertion.JsonAsserter - Path: $.body.id was not found in the response. Hence this value was treated as null.
+2025-07-21 21:34:49,290 [main] WARN  org.jsmart.zerocode.core.engine.assertion.JsonAsserter - Path: $.body.login was not found in the response. Hence this value was treated as null.
+2025-07-21 21:34:49,293 [main] ERROR org.jsmart.zerocode.core.runner.StepNotificationHandler - Failed assertion during Scenario:GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body, --> Step:get_user_details, Details: Assertion jsonPath '$.body.type' with actual value 'null' did not match the expected value 'User'
+Assertion jsonPath '$.body.id' with actual value 'null' did not match the expected value '583231'
+Assertion jsonPath '$.status' with actual value '403' did not match the expected value '200'
+Assertion jsonPath '$.body.login' with actual value 'null' did not match the expected value 'octocat'
+
+2025-07-21 21:34:49,294 [main] ERROR org.jsmart.zerocode.core.runner.StepNotificationHandler - Assertion failed for :- 
+
+[GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body] 
+	|
+	|
+	+---Step --> [get_user_details] 
+
+Failures:
+--------- 
+Assertion jsonPath '$.body.type' with actual value 'null' did not match the expected value 'User'
+-----------------------------------------------------------------------------------------------------
+Assertion jsonPath '$.body.id' with actual value 'null' did not match the expected value '583231'
+-----------------------------------------------------------------------------------------------------
+Assertion jsonPath '$.status' with actual value '403' did not match the expected value '200'
+-----------------------------------------------------------------------------------------------------
+Assertion jsonPath '$.body.login' with actual value 'null' did not match the expected value 'octocat'
+(See below 'Actual Vs Expected' to learn why this step failed) 
+
+2025-07-21 21:34:49,296 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+--------- TEST-STEP-CORRELATION-ID: ac2d0ab8-3091-488c-a888-a34db53f0d8b ---------
+*requestTimeStamp:2025-07-21T21:34:48.863035
+step:get_user_details
+id:None
+url:https://api.github.com/users/octocat
+method:GET
+request:
+{ } 
+--------- TEST-STEP-CORRELATION-ID: ac2d0ab8-3091-488c-a888-a34db53f0d8b ---------
+Response:
+{
+  "status" : 403,
+  "headers" : {
+    "Access-Control-Allow-Origin" : [ "*" ],
+    "Access-Control-Expose-Headers" : [ "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset" ],
+    "Content-Length" : [ "280" ],
+    "Content-Security-Policy" : [ "default-src 'none'; style-src 'unsafe-inline'" ],
+    "Content-Type" : [ "application/json; charset=utf-8" ],
+    "Date" : [ "Mon, 21 Jul 2025 16:04:49 GMT" ],
+    "Referrer-Policy" : [ "origin-when-cross-origin, strict-origin-when-cross-origin" ],
+    "Server" : [ "Varnish" ],
+    "Strict-Transport-Security" : [ "max-age=31536000; includeSubdomains; preload" ],
+    "X-Content-Type-Options" : [ "nosniff" ],
+    "X-Frame-Options" : [ "deny" ],
+    "X-GitHub-Media-Type" : [ "github.v3; format=json" ],
+    "X-GitHub-Request-Id" : [ "C2AA:1BD999:A1F1B:BC120:687E6521" ],
+    "X-RateLimit-Limit" : [ "60" ],
+    "X-RateLimit-Remaining" : [ "0" ],
+    "X-RateLimit-Reset" : [ "1753115984" ],
+    "X-RateLimit-Resource" : [ "core" ],
+    "X-RateLimit-Used" : [ "60" ],
+    "X-XSS-Protection" : [ "1; mode=block" ]
+  },
+  "body" : {
+    "message" : "API rate limit exceeded for 151.186.177.83. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)",
+    "documentation_url" : "https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"
+  }
+}
+*responseTimeStamp:2025-07-21T21:34:49.286866 
+*Response delay:423.0 milli-secs 
+---------> Expected Response: <----------
+Assumed Payload: 
+{
+  "status" : 200,
+  "body" : {
+    "login" : "octocat",
+    "id" : 583231,
+    "type" : "User"
+  }
+}
+Assertion Errors: 
+Assertion jsonPath '$.body.type' with actual value 'null' did not match the expected value 'User'
+Assertion jsonPath '$.body.id' with actual value 'null' did not match the expected value '583231'
+Assertion jsonPath '$.status' with actual value '403' did not match the expected value '200'
+Assertion jsonPath '$.body.login' with actual value 'null' did not match the expected value 'octocat'
+ 
+ 
+-done-
+
+2025-07-21 21:34:51,305 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - Directory does not exist or is not a valid directory: target/surefire-reports/
