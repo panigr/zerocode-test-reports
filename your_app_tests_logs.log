@@ -9694,3 +9694,338 @@ Assertion jsonPath '$.body.login' with actual value 'null' did not match the exp
 -done-
 
 2025-07-21 21:37:26,209 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - Directory does not exist or is not a valid directory: target/surefire-reports/
+2025-07-21 21:38:03,725 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+-----------------------------------------------------------------------------------
+
+Scenario:
++++++++++
+
+GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body 
+
+-----------------------------------------------------------------------------------
+2025-07-21 21:38:04,166 [main] WARN  org.jsmart.zerocode.core.engine.assertion.JsonAsserter - Path: $.body.type was not found in the response. Hence this value was treated as null.
+2025-07-21 21:38:04,166 [main] WARN  org.jsmart.zerocode.core.engine.assertion.JsonAsserter - Path: $.body.id was not found in the response. Hence this value was treated as null.
+2025-07-21 21:38:04,167 [main] WARN  org.jsmart.zerocode.core.engine.assertion.JsonAsserter - Path: $.body.login was not found in the response. Hence this value was treated as null.
+2025-07-21 21:38:04,170 [main] ERROR org.jsmart.zerocode.core.runner.StepNotificationHandler - Failed assertion during Scenario:GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body, --> Step:get_user_details, Details: Assertion jsonPath '$.body.type' with actual value 'null' did not match the expected value 'User'
+Assertion jsonPath '$.body.id' with actual value 'null' did not match the expected value '583231'
+Assertion jsonPath '$.status' with actual value '403' did not match the expected value '200'
+Assertion jsonPath '$.body.login' with actual value 'null' did not match the expected value 'octocat'
+
+2025-07-21 21:38:04,170 [main] ERROR org.jsmart.zerocode.core.runner.StepNotificationHandler - Assertion failed for :- 
+
+[GIVEN- the GitHub REST end point, WHEN- I invoke GET, THEN- I will receive the 200 status with body] 
+	|
+	|
+	+---Step --> [get_user_details] 
+
+Failures:
+--------- 
+Assertion jsonPath '$.body.type' with actual value 'null' did not match the expected value 'User'
+-----------------------------------------------------------------------------------------------------
+Assertion jsonPath '$.body.id' with actual value 'null' did not match the expected value '583231'
+-----------------------------------------------------------------------------------------------------
+Assertion jsonPath '$.status' with actual value '403' did not match the expected value '200'
+-----------------------------------------------------------------------------------------------------
+Assertion jsonPath '$.body.login' with actual value 'null' did not match the expected value 'octocat'
+(See below 'Actual Vs Expected' to learn why this step failed) 
+
+2025-07-21 21:38:04,173 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+--------- TEST-STEP-CORRELATION-ID: 789ea148-ce44-4c2e-ab8e-b5affbd68ce7 ---------
+*requestTimeStamp:2025-07-21T21:38:03.747525
+step:get_user_details
+id:None
+url:https://api.github.com/users/octocat
+method:GET
+request:
+{ } 
+--------- TEST-STEP-CORRELATION-ID: 789ea148-ce44-4c2e-ab8e-b5affbd68ce7 ---------
+Response:
+{
+  "status" : 403,
+  "headers" : {
+    "Access-Control-Allow-Origin" : [ "*" ],
+    "Access-Control-Expose-Headers" : [ "ETag, Link, Location, Retry-After, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-RateLimit-Used, X-RateLimit-Resource, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval, X-GitHub-Media-Type, Deprecation, Sunset" ],
+    "Content-Length" : [ "280" ],
+    "Content-Security-Policy" : [ "default-src 'none'; style-src 'unsafe-inline'" ],
+    "Content-Type" : [ "application/json; charset=utf-8" ],
+    "Date" : [ "Mon, 21 Jul 2025 16:08:04 GMT" ],
+    "Referrer-Policy" : [ "origin-when-cross-origin, strict-origin-when-cross-origin" ],
+    "Server" : [ "Varnish" ],
+    "Strict-Transport-Security" : [ "max-age=31536000; includeSubdomains; preload" ],
+    "X-Content-Type-Options" : [ "nosniff" ],
+    "X-Frame-Options" : [ "deny" ],
+    "X-GitHub-Media-Type" : [ "github.v3; format=json" ],
+    "X-GitHub-Request-Id" : [ "95CC:2EBFB8:A00D0:BB6CD:687E65E4" ],
+    "X-RateLimit-Limit" : [ "60" ],
+    "X-RateLimit-Remaining" : [ "0" ],
+    "X-RateLimit-Reset" : [ "1753115984" ],
+    "X-RateLimit-Resource" : [ "core" ],
+    "X-RateLimit-Used" : [ "60" ],
+    "X-XSS-Protection" : [ "1; mode=block" ]
+  },
+  "body" : {
+    "message" : "API rate limit exceeded for 151.186.177.83. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)",
+    "documentation_url" : "https://docs.github.com/rest/overview/resources-in-the-rest-api#rate-limiting"
+  }
+}
+*responseTimeStamp:2025-07-21T21:38:04.163640 
+*Response delay:416.0 milli-secs 
+---------> Expected Response: <----------
+Assumed Payload: 
+{
+  "status" : 200,
+  "body" : {
+    "login" : "octocat",
+    "id" : 583231,
+    "type" : "User"
+  }
+}
+Assertion Errors: 
+Assertion jsonPath '$.body.type' with actual value 'null' did not match the expected value 'User'
+Assertion jsonPath '$.body.id' with actual value 'null' did not match the expected value '583231'
+Assertion jsonPath '$.status' with actual value '403' did not match the expected value '200'
+Assertion jsonPath '$.body.login' with actual value 'null' did not match the expected value 'octocat'
+ 
+ 
+-done-
+
+2025-07-21 21:38:05,219 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-21 21:38:53,604 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+-----------------------------------------------------------------------------------
+
+Scenario:
++++++++++
+
+Pick a value from result array when JSON Path returns an array for a single matching field 
+
+-----------------------------------------------------------------------------------
+2025-07-21 21:38:53,638 [main] WARN  org.jsmart.zerocode.core.runner.StepNotificationHandler - 
+***Step PASSED - Scenario:Pick a value from result array when JSON Path returns an array for a single matching field -> get_records
+2025-07-21 21:38:53,638 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+--------- TEST-STEP-CORRELATION-ID: 7f62c9ad-eacf-4d86-84ab-1713a94c902d ---------
+*requestTimeStamp:2025-07-21T21:38:53.625421
+step:get_records
+id:None
+url:org.jsmart.zerocode.zerocodejavaexec.DbSqlExecutor
+method:fetchDbCustomers
+request:
+"select id, name from customers" 
+--------- TEST-STEP-CORRELATION-ID: 7f62c9ad-eacf-4d86-84ab-1713a94c902d ---------
+Response:
+{
+  "results" : [ {
+    "id" : 1,
+    "name" : "Elon Musk"
+  }, {
+    "id" : 2,
+    "name" : "Jeff Bezos"
+  } ]
+}
+*responseTimeStamp:2025-07-21T21:38:53.629524 
+*Response delay:4.0 milli-secs 
+---------> Expected Response: <----------
+{
+  "results" : [ {
+    "id" : 1,
+    "name" : "Elon Musk"
+  }, {
+    "id" : 2,
+    "name" : "Jeff Bezos"
+  } ]
+} 
+ 
+-done-
+
+2025-07-21 21:38:53,655 [main] WARN  org.jsmart.zerocode.core.runner.StepNotificationHandler - 
+***Step PASSED - Scenario:Pick a value from result array when JSON Path returns an array for a single matching field -> find_matching_value
+2025-07-21 21:38:53,655 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+--------- TEST-STEP-CORRELATION-ID: a3f33b1c-3233-4971-b35c-fe5c1fadbb9b ---------
+*requestTimeStamp:2025-07-21T21:38:53.652741
+step:find_matching_value
+id:None
+url:org.jsmart.zerocode.converter.MimeTypeConverter
+method:stringToJson
+request:
+"[\"Jeff Bezos\"]" 
+--------- TEST-STEP-CORRELATION-ID: a3f33b1c-3233-4971-b35c-fe5c1fadbb9b ---------
+Response:
+[ "Jeff Bezos" ]
+*responseTimeStamp:2025-07-21T21:38:53.654907 
+*Response delay:2.0 milli-secs 
+---------> Expected Response: <----------
+[ "Jeff Bezos" ] 
+ 
+-done-
+
+2025-07-21 21:38:53,658 [main] WARN  org.jsmart.zerocode.core.runner.StepNotificationHandler - 
+***Step PASSED - Scenario:Pick a value from result array when JSON Path returns an array for a single matching field -> get_by_name
+2025-07-21 21:38:53,658 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+--------- TEST-STEP-CORRELATION-ID: dc2fb5f3-63d1-45e0-9431-f3b2bd8b679b ---------
+*requestTimeStamp:2025-07-21T21:38:53.656620
+step:get_by_name
+id:None
+url:org.jsmart.zerocode.zerocodejavaexec.DbSqlExecutor
+method:fetchDbCustomersByName
+request:
+"Jeff Bezos" 
+--------- TEST-STEP-CORRELATION-ID: dc2fb5f3-63d1-45e0-9431-f3b2bd8b679b ---------
+Response:
+{
+  "results" : [ {
+    "id" : 2,
+    "name" : "Jeff Bezos"
+  } ]
+}
+*responseTimeStamp:2025-07-21T21:38:53.657464 
+*Response delay:0.0 milli-secs 
+---------> Expected Response: <----------
+{
+  "results" : [ {
+    "id" : 2,
+    "name" : "Jeff Bezos"
+  } ]
+} 
+ 
+-done-
+
+2025-07-21 21:38:53,778 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+-----------------------------------------------------------------------------------
+
+Scenario:
++++++++++
+
+Pick a value from returned array for matching JSON Path  
+
+-----------------------------------------------------------------------------------
+2025-07-21 21:38:53,780 [main] WARN  org.jsmart.zerocode.core.runner.StepNotificationHandler - 
+***Step PASSED - Scenario:Pick a value from returned array for matching JSON Path  -> get_records
+2025-07-21 21:38:53,781 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+--------- TEST-STEP-CORRELATION-ID: 3bf3427a-2382-4af2-a11d-663618e32dc1 ---------
+*requestTimeStamp:2025-07-21T21:38:53.779391
+step:get_records
+id:None
+url:org.jsmart.zerocode.zerocodejavaexec.DbSqlExecutor
+method:fetchDbCustomers
+request:
+"select id, name from customers" 
+--------- TEST-STEP-CORRELATION-ID: 3bf3427a-2382-4af2-a11d-663618e32dc1 ---------
+Response:
+{
+  "results" : [ {
+    "id" : 1,
+    "name" : "Elon Musk"
+  }, {
+    "id" : 2,
+    "name" : "Jeff Bezos"
+  } ]
+}
+*responseTimeStamp:2025-07-21T21:38:53.779961 
+*Response delay:0.0 milli-secs 
+---------> Expected Response: <----------
+{
+  "results" : [ {
+    "id" : 1,
+    "name" : "Elon Musk"
+  }, {
+    "id" : 2,
+    "name" : "Jeff Bezos"
+  } ]
+} 
+ 
+-done-
+
+2025-07-21 21:38:53,782 [main] WARN  org.jsmart.zerocode.core.runner.StepNotificationHandler - 
+***Step PASSED - Scenario:Pick a value from returned array for matching JSON Path  -> get_by_name
+2025-07-21 21:38:53,783 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+--------- TEST-STEP-CORRELATION-ID: 792ab427-8b05-4149-92c0-c0f1a26b0323 ---------
+*requestTimeStamp:2025-07-21T21:38:53.781945
+step:get_by_name
+id:None
+url:org.jsmart.zerocode.zerocodejavaexec.DbSqlExecutor
+method:fetchDbCustomersByName
+request:
+"Jeff Bezos" 
+--------- TEST-STEP-CORRELATION-ID: 792ab427-8b05-4149-92c0-c0f1a26b0323 ---------
+Response:
+{
+  "results" : [ {
+    "id" : 2,
+    "name" : "Jeff Bezos"
+  } ]
+}
+*responseTimeStamp:2025-07-21T21:38:53.782284 
+*Response delay:0.0 milli-secs 
+---------> Expected Response: <----------
+{
+  "results" : [ {
+    "id" : 2,
+    "name" : "Jeff Bezos"
+  } ]
+} 
+ 
+-done-
+
+2025-07-21 21:38:53,786 [main] WARN  org.jsmart.zerocode.core.runner.StepNotificationHandler - 
+***Step PASSED - Scenario:Pick a value from returned array for matching JSON Path  -> get_by_name_index_0
+2025-07-21 21:38:53,786 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+--------- TEST-STEP-CORRELATION-ID: 6780bd21-0cb7-463f-89b9-71ec3899c01e ---------
+*requestTimeStamp:2025-07-21T21:38:53.785428
+step:get_by_name_index_0
+id:None
+url:org.jsmart.zerocode.zerocodejavaexec.DbSqlExecutor
+method:fetchDbCustomersByName
+request:
+"Jeff Bezos" 
+--------- TEST-STEP-CORRELATION-ID: 6780bd21-0cb7-463f-89b9-71ec3899c01e ---------
+Response:
+{
+  "results" : [ {
+    "id" : 2,
+    "name" : "Jeff Bezos"
+  } ]
+}
+*responseTimeStamp:2025-07-21T21:38:53.785811 
+*Response delay:0.0 milli-secs 
+---------> Expected Response: <----------
+{
+  "results" : [ {
+    "id" : 2,
+    "name" : "Jeff Bezos"
+  } ]
+} 
+ 
+-done-
+
+2025-07-21 21:38:53,791 [main] WARN  org.jsmart.zerocode.core.runner.StepNotificationHandler - 
+***Step PASSED - Scenario:Pick a value from returned array for matching JSON Path  -> get_by_name_index_1
+2025-07-21 21:38:53,792 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+--------- TEST-STEP-CORRELATION-ID: aa94fa27-a40d-4850-adee-0cc0d1b1bff2 ---------
+*requestTimeStamp:2025-07-21T21:38:53.790992
+step:get_by_name_index_1
+id:None
+url:org.jsmart.zerocode.zerocodejavaexec.DbSqlExecutor
+method:fetchDbCustomersByName
+request:
+"Jeff Bezos" 
+--------- TEST-STEP-CORRELATION-ID: aa94fa27-a40d-4850-adee-0cc0d1b1bff2 ---------
+Response:
+{
+  "results" : [ {
+    "id" : 2,
+    "name" : "Jeff Bezos"
+  } ]
+}
+*responseTimeStamp:2025-07-21T21:38:53.791339 
+*Response delay:0.0 milli-secs 
+---------> Expected Response: <----------
+{
+  "results" : [ {
+    "id" : 2,
+    "name" : "Jeff Bezos"
+  } ]
+} 
+ 
+-done-
+
+2025-07-21 21:38:54,912 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-22 19:28:54,736 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - Directory does not exist or is not a valid directory: target/surefire-reports/
