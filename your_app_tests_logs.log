@@ -26918,3 +26918,280 @@ Assertion jsonPath '$.body.login' with actual value 'null' did not match the exp
 2025-07-24 17:42:12,844 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
 2025-07-24 17:42:12,844 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
 2025-07-24 17:42:13,822 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - Directory does not exist or is not a valid directory: target/surefire-reports/
+2025-07-24 17:42:15,894 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+-----------------------------------------------------------------------------------
+
+Scenario:
++++++++++
+
+@@Santhosh - Will Mock some End Points via WireMock and Test the end points using Zerocode 
+
+-----------------------------------------------------------------------------------
+2025-07-24 17:42:15,899 [main] ERROR org.jsmart.zerocode.core.engine.executor.ApiServiceExecutorImpl - Ooooooooooops! Something unexpected happened while connecting to the url:http://localhost:8888/$MOCK 
+1) Check if the service is running at the host -or-
+2) Check the corporate proxy has been configured correctly -or
+3) Choose another mocking(if in use) port not to conflict with the port:8888 -or-
+4) Restart the service. -or- See the full error details below-
+{}
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "method" (class org.jsmart.zerocode.core.domain.MockStep), not marked as ignorable (9 known properties: "response", "body", "headers", "operation", "name", "url", "assertions", "headersMap", "request"])
+ at [Source: (String)"{"mocks":[{"name":"mocking_a_GET_endpoint","method":"POST","url":"/soap/CurrencyConvertor","response":{"status":200,"headers":{"Content-Type":"text/xml; charset=utf-8"},"body":"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetCurrencyRate xmlns=\"http://tempuri.org/\">\n      <Currency>string</Currency>\"[truncated 99 chars]; line: 1, column: 598] (through reference chain: org.jsmart.zerocode.core.domain.MockSteps["mocks"]->java.util.ArrayList[0]->org.jsmart.zerocode.core.domain.MockStep["method"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1719)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperties(BeanDeserializerBase.java:1669)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:546)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1419)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:352)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:359)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28)
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:545)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:570)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:439)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1419)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:352)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3740)
+	at org.jsmart.zerocode.core.engine.executor.httpapi.HttpApiExecutorImpl.completedMockingEndPoints(HttpApiExecutorImpl.java:111)
+	at org.jsmart.zerocode.core.engine.executor.httpapi.HttpApiExecutorImpl.execute(HttpApiExecutorImpl.java:55)
+	at org.jsmart.zerocode.core.engine.executor.ApiServiceExecutorImpl.executeHttpApi(ApiServiceExecutorImpl.java:34)
+	at org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl.executeApi(ZeroCodeMultiStepsScenarioRunnerImpl.java:457)
+	at org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl.executeRetry(ZeroCodeMultiStepsScenarioRunnerImpl.java:256)
+	at org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl.executeRetryWithSteps(ZeroCodeMultiStepsScenarioRunnerImpl.java:195)
+	at org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl.executeSteps(ZeroCodeMultiStepsScenarioRunnerImpl.java:177)
+	at org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl.runScenario(ZeroCodeMultiStepsScenarioRunnerImpl.java:140)
+	at org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner.runLeafJsonTest(ZeroCodeUnitRunner.java:223)
+	at org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner.runChild(ZeroCodeUnitRunner.java:127)
+	at org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner.runChild(ZeroCodeUnitRunner.java:51)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner.run(ZeroCodeUnitRunner.java:107)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-07-24 17:42:15,901 [main] ERROR org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - ###Exception while executing a step in the zerocode dsl.
+2025-07-24 17:42:15,901 [main] ERROR org.jsmart.zerocode.core.runner.StepNotificationHandler - Exception occurred while executing Scenario:[@@Santhosh - Will Mock some End Points via WireMock and Test the end points using Zerocode], --> Step:[setup_mocks], Details: java.lang.RuntimeException: ZeroCode Step execution failed. Details:java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "method" (class org.jsmart.zerocode.core.domain.MockStep), not marked as ignorable (9 known properties: "response", "body", "headers", "operation", "name", "url", "assertions", "headersMap", "request"])
+ at [Source: (String)"{"mocks":[{"name":"mocking_a_GET_endpoint","method":"POST","url":"/soap/CurrencyConvertor","response":{"status":200,"headers":{"Content-Type":"text/xml; charset=utf-8"},"body":"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetCurrencyRate xmlns=\"http://tempuri.org/\">\n      <Currency>string</Currency>\"[truncated 99 chars]; line: 1, column: 598] (through reference chain: org.jsmart.zerocode.core.domain.MockSteps["mocks"]->java.util.ArrayList[0]->org.jsmart.zerocode.core.domain.MockStep["method"])
+2025-07-24 17:42:15,901 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+--------- TEST-STEP-CORRELATION-ID: 2adf9d11-5e3c-4419-99bb-ea1e45ececa1 ---------
+*requestTimeStamp:2025-07-24T17:42:15.895144
+step:setup_mocks
+id:None
+url:http://localhost:8888/$MOCK
+method:$USE.WIREMOCK
+request:
+{
+  "mocks" : [ {
+    "name" : "mocking_a_GET_endpoint",
+    "method" : "POST",
+    "url" : "/soap/CurrencyConvertor",
+    "response" : {
+      "status" : 200,
+      "headers" : {
+        "Content-Type" : "text/xml; charset=utf-8"
+      },
+      "body" : "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">\n  <soap:Body>\n    <GetCurrencyRate xmlns=\"http://tempuri.org/\">\n      <Currency>string</Currency>\n      <RateDate>dateTime</RateDate>\n    </GetCurrencyRate>\n  </soap:Body>\n</soap:Envelope>"
+    }
+  } ]
+} 
+--------- TEST-STEP-CORRELATION-ID: 2adf9d11-5e3c-4419-99bb-ea1e45ececa1 ---------
+Response:
+-response unavailable-
+*responseTimeStamp:2025-07-24T17:42:15.901186 
+*Response delay:6.0 milli-secs 
+---------> Expected Response: <----------
+{Oops! Not decided. Possibly due to non JSON content was encountered. See log for details} 
+ 
+-done-
+
+2025-07-24 17:42:16,009 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+-----------------------------------------------------------------------------------
+
+Scenario:
++++++++++
+
+Will Mock some End Points via WireMock and Test the end points using Zerocode 
+
+-----------------------------------------------------------------------------------
+2025-07-24 17:42:16,010 [main] ERROR org.jsmart.zerocode.core.engine.executor.ApiServiceExecutorImpl - Ooooooooooops! Something unexpected happened while connecting to the url:http://localhost:8888/$MOCK 
+1) Check if the service is running at the host -or-
+2) Check the corporate proxy has been configured correctly -or
+3) Choose another mocking(if in use) port not to conflict with the port:8888 -or-
+4) Restart the service. -or- See the full error details below-
+{}
+com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "method" (class org.jsmart.zerocode.core.domain.MockStep), not marked as ignorable (9 known properties: "response", "body", "headers", "operation", "name", "url", "assertions", "headersMap", "request"])
+ at [Source: (String)"{"mocks":[{"name":"mocking_a_GET_endpoint","method":"GET","url":"/api/v1/amazon/customers/UK001","response":{"status":200,"headers":{"Accept":"application/json"},"body":{"id":"UK001","name":"Adam Smith","Age":"33"}}},{"name":"mocking_a_GET_endpoint_with_headers","method":"GET","url":"/api/v1/amazon/customers/cust-007","request":{"headers":{"api_key":"key-01-01","api_secret":"secret-01-01"}},"response":{"status":200,"body":{"id":"cust-007","type":"Premium"}}}]}"; line: 1, column: 217] (through reference chain: org.jsmart.zerocode.core.domain.MockSteps["mocks"]->java.util.ArrayList[0]->org.jsmart.zerocode.core.domain.MockStep["method"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:61)
+	at com.fasterxml.jackson.databind.DeserializationContext.handleUnknownProperty(DeserializationContext.java:1138)
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:2224)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1719)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperties(BeanDeserializerBase.java:1669)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:546)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1419)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:352)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer._deserializeFromArray(CollectionDeserializer.java:359)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:244)
+	at com.fasterxml.jackson.databind.deser.std.CollectionDeserializer.deserialize(CollectionDeserializer.java:28)
+	at com.fasterxml.jackson.databind.deser.SettableBeanProperty.deserialize(SettableBeanProperty.java:545)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeWithErrorWrapping(BeanDeserializer.java:570)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer._deserializeUsingPropertyBased(BeanDeserializer.java:439)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.deserializeFromObjectUsingNonDefault(BeanDeserializerBase.java:1419)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserializeFromObject(BeanDeserializer.java:352)
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:185)
+	at com.fasterxml.jackson.databind.deser.DefaultDeserializationContext.readRootValue(DefaultDeserializationContext.java:323)
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:4825)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3772)
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:3740)
+	at org.jsmart.zerocode.core.engine.executor.httpapi.HttpApiExecutorImpl.completedMockingEndPoints(HttpApiExecutorImpl.java:111)
+	at org.jsmart.zerocode.core.engine.executor.httpapi.HttpApiExecutorImpl.execute(HttpApiExecutorImpl.java:55)
+	at org.jsmart.zerocode.core.engine.executor.ApiServiceExecutorImpl.executeHttpApi(ApiServiceExecutorImpl.java:34)
+	at org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl.executeApi(ZeroCodeMultiStepsScenarioRunnerImpl.java:457)
+	at org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl.executeRetry(ZeroCodeMultiStepsScenarioRunnerImpl.java:256)
+	at org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl.executeRetryWithSteps(ZeroCodeMultiStepsScenarioRunnerImpl.java:195)
+	at org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl.executeSteps(ZeroCodeMultiStepsScenarioRunnerImpl.java:177)
+	at org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl.runScenario(ZeroCodeMultiStepsScenarioRunnerImpl.java:140)
+	at org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner.runLeafJsonTest(ZeroCodeUnitRunner.java:223)
+	at org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner.runChild(ZeroCodeUnitRunner.java:127)
+	at org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner.runChild(ZeroCodeUnitRunner.java:51)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.jsmart.zerocode.core.runner.ZeroCodeUnitRunner.run(ZeroCodeUnitRunner.java:107)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+	at com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)
+	at com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)
+2025-07-24 17:42:16,010 [main] ERROR org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - ###Exception while executing a step in the zerocode dsl.
+2025-07-24 17:42:16,010 [main] ERROR org.jsmart.zerocode.core.runner.StepNotificationHandler - Exception occurred while executing Scenario:[Will Mock some End Points via WireMock and Test the end points using Zerocode], --> Step:[setup_mocks], Details: java.lang.RuntimeException: ZeroCode Step execution failed. Details:java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "method" (class org.jsmart.zerocode.core.domain.MockStep), not marked as ignorable (9 known properties: "response", "body", "headers", "operation", "name", "url", "assertions", "headersMap", "request"])
+ at [Source: (String)"{"mocks":[{"name":"mocking_a_GET_endpoint","method":"GET","url":"/api/v1/amazon/customers/UK001","response":{"status":200,"headers":{"Accept":"application/json"},"body":{"id":"UK001","name":"Adam Smith","Age":"33"}}},{"name":"mocking_a_GET_endpoint_with_headers","method":"GET","url":"/api/v1/amazon/customers/cust-007","request":{"headers":{"api_key":"key-01-01","api_secret":"secret-01-01"}},"response":{"status":200,"body":{"id":"cust-007","type":"Premium"}}}]}"; line: 1, column: 217] (through reference chain: org.jsmart.zerocode.core.domain.MockSteps["mocks"]->java.util.ArrayList[0]->org.jsmart.zerocode.core.domain.MockStep["method"])
+2025-07-24 17:42:16,010 [main] WARN  org.jsmart.zerocode.core.runner.ZeroCodeMultiStepsScenarioRunnerImpl - 
+--------- TEST-STEP-CORRELATION-ID: 92b014b8-a934-41d5-9ecb-03ec0d05af1f ---------
+*requestTimeStamp:2025-07-24T17:42:16.009721
+step:setup_mocks
+id:None
+url:http://localhost:8888/$MOCK
+method:$USE.WIREMOCK
+request:
+{
+  "mocks" : [ {
+    "name" : "mocking_a_GET_endpoint",
+    "method" : "GET",
+    "url" : "/api/v1/amazon/customers/UK001",
+    "response" : {
+      "status" : 200,
+      "headers" : {
+        "Accept" : "application/json"
+      },
+      "body" : {
+        "id" : "UK001",
+        "name" : "Adam Smith",
+        "Age" : "33"
+      }
+    }
+  }, {
+    "name" : "mocking_a_GET_endpoint_with_headers",
+    "method" : "GET",
+    "url" : "/api/v1/amazon/customers/cust-007",
+    "request" : {
+      "headers" : {
+        "api_key" : "key-01-01",
+        "api_secret" : "secret-01-01"
+      }
+    },
+    "response" : {
+      "status" : 200,
+      "body" : {
+        "id" : "cust-007",
+        "type" : "Premium"
+      }
+    }
+  } ]
+} 
+--------- TEST-STEP-CORRELATION-ID: 92b014b8-a934-41d5-9ecb-03ec0d05af1f ---------
+Response:
+-response unavailable-
+*responseTimeStamp:2025-07-24T17:42:16.010590 
+*Response delay:0.0 milli-secs 
+---------> Expected Response: <----------
+{Oops! Not decided. Possibly due to non JSON content was encountered. See log for details} 
+ 
+-done-
+
+2025-07-24 17:42:16,117 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,118 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - One or more required variables are not set. Skipping report upload.
+2025-07-24 17:42:16,655 [main] WARN  org.jsmart.zerocode.core.report.ZeroCodeReportGeneratorImpl - Directory does not exist or is not a valid directory: target/surefire-reports/
